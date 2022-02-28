@@ -1,0 +1,55 @@
+package model;
+
+import javax.persistence.Column;  
+import javax.persistence.Entity;  
+import javax.persistence.Id;  
+import javax.persistence.Table;  
+@Entity  
+ @Table  
+ public class Book  
+{  
+    @Id  
+    @Column
+    private int bookId;  
+    @Column  
+    private String bookName;  
+    @Column  
+    private String authorName; 
+    @Column 
+    private String bookDescription;
+    public int getBookId()   
+{  
+return bookId;  
+}  
+public void setbookId(int bookId)   
+{  
+this.bookId = bookId;  
+}  
+
+public String getbookName()   
+{  
+return bookName;  
+}  
+public void setbookName(String bookName)   
+{  
+this.bookName = bookName;  
+} 
+ 
+
+public String getauthorName()   
+{  
+return authorName;  
+}  
+public void setauthorName(String authorName)   
+{  
+this.authorName = authorName;  
+} 
+public String getbookDescription()   
+{  
+return bookDescription;  
+}  
+public void setbookDescription(String bookDescription)   
+{  
+this.bookDescription = bookDescription;  
+} 
+}

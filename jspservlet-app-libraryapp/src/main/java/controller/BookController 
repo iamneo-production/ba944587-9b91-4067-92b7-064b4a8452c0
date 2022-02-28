@@ -1,0 +1,35 @@
+pockage controller;
+ava.util.List;  
+import org.springframework.beans.factory.annotation.Autowired;  
+import org.springframework.web.bind.annotation.DeleteMapping;  
+import org.springframework.web.bind.annotation.GetMapping;  
+import org.springframework.web.bind.annotation.PathVariable;  
+import org.springframework.web.bind.annotation.PostMapping;  
+import org.springframework.web.bind.annotation.PutMapping;  
+import org.springframework.web.bind.annotation.RequestBody;  
+import org.springframework.web.bind.annotation.RestController;  
+import model.Book;  
+import service.LibraryDao;  
+@RestController
+public class BookController
+{
+    @Autowired
+    LibraryDao librarydao;
+    @GetMapping("/book")
+    private void addBook(Book)
+    {
+       librarydao.add(Book); 
+    }
+    private void updateBook(Book)
+    {
+      librarydao.save(Book);  
+    }
+    private Book viewBookById(Book)
+    {
+    Rerurn librarydao.findByBookId(book);
+    }
+    Private void deleteBook(bookId)
+    {
+        librarydao.delete(bookId);
+    }
+}

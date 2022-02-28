@@ -1,0 +1,6 @@
+import org.springframework.data.repository.CrudRepository;  
+import model.Book;  
+public interface bookRepository extends CrudRepository<Book, Integer>
+{
+    
+} 

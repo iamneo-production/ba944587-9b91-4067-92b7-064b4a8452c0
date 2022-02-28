@@ -1,0 +1,41 @@
+package service
+import java.util.ArrayList;  
+import java.util.List;  
+import org.springframework.beans.factory.annotation.Autowired;  
+import org.springframework.stereotype.Service;  
+import model.Book;  
+import repository.BookRepository;  
+@Service
+public class LibraryDao
+{
+    @Autowired
+    BookRepository bookRepository
+    public List<Book> getAllBooks()   
+{  
+List<Book> book = new ArrayList<Book>();  
+bookRepository.findAll().forEach(book1 -> book.add(book1));  
+return book;  
+}  
+
+    public void addBook(Book)
+    {
+        bookRepository.add(Book);
+
+    }
+    public void updateBook(Book)
+    {
+    bookRepository.save(Book);
+
+     }
+     public Book viewBookById()
+    {
+    Rerurn bookRepository.findByBookId(book);
+    
+     }
+     public void deleteBook(bookId)
+    {
+        bookRepository.delete(bookId);
+
+    }
+
+}
